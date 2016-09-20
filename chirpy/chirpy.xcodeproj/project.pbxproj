@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37A582E31D91AEEE00F4A372 /* TwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A582E21D91AEEE00F4A372 /* TwitterClient.m */; };
+		37FDBA781D90E5AB00C34ECA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDBA771D90E5AB00C34ECA /* main.m */; };
+		37FDBA7B1D90E5AB00C34ECA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDBA7A1D90E5AB00C34ECA /* AppDelegate.m */; };
+		37FDBA831D90E5AB00C34ECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FDBA821D90E5AB00C34ECA /* Assets.xcassets */; };
+		37FDBA861D90E5AB00C34ECA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FDBA841D90E5AB00C34ECA /* LaunchScreen.storyboard */; };
+		37FDBA901D90E84900C34ECA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDBA8E1D90E84900C34ECA /* LoginViewController.m */; };
+		37FDBA911D90E84900C34ECA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37FDBA8F1D90E84900C34ECA /* LoginViewController.xib */; };
+		B11D59ADAAD7E4460ADD887C /* libPods-chirpy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEBCF50C9A0520B80BB479C /* libPods-chirpy.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0EC9C51A2F5504CDC968A3A3 /* Pods-chirpy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chirpy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chirpy/Pods-chirpy.debug.xcconfig"; sourceTree = "<group>"; };
+		37A582E11D91AEEE00F4A372 /* TwitterClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterClient.h; sourceTree = "<group>"; };
+		37A582E21D91AEEE00F4A372 /* TwitterClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterClient.m; sourceTree = "<group>"; };
+		37FDBA731D90E5AB00C34ECA /* chirpy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chirpy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37FDBA771D90E5AB00C34ECA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37FDBA791D90E5AB00C34ECA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		37FDBA7A1D90E5AB00C34ECA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		37FDBA821D90E5AB00C34ECA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37FDBA851D90E5AB00C34ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		37FDBA871D90E5AB00C34ECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37FDBA8D1D90E84900C34ECA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		37FDBA8E1D90E84900C34ECA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		37FDBA8F1D90E84900C34ECA /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		51A4840E0EC05975B2504790 /* Pods-chirpy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chirpy.release.xcconfig"; path = "Pods/Target Support Files/Pods-chirpy/Pods-chirpy.release.xcconfig"; sourceTree = "<group>"; };
+		DCEBCF50C9A0520B80BB479C /* libPods-chirpy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-chirpy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37FDBA701D90E5AB00C34ECA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B11D59ADAAD7E4460ADD887C /* libPods-chirpy.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B1C29DB0EB6B5FC0DA65E1F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EC9C51A2F5504CDC968A3A3 /* Pods-chirpy.debug.xcconfig */,
+				51A4840E0EC05975B2504790 /* Pods-chirpy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		37FDBA6A1D90E5AB00C34ECA = {
+			isa = PBXGroup;
+			children = (
+				37FDBA751D90E5AB00C34ECA /* chirpy */,
+				37FDBA741D90E5AB00C34ECA /* Products */,
+				2B1C29DB0EB6B5FC0DA65E1F /* Pods */,
+				9238E863E2B413BD6870E052 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		37FDBA741D90E5AB00C34ECA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37FDBA731D90E5AB00C34ECA /* chirpy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37FDBA751D90E5AB00C34ECA /* chirpy */ = {
+			isa = PBXGroup;
+			children = (
+				37FDBA791D90E5AB00C34ECA /* AppDelegate.h */,
+				37FDBA7A1D90E5AB00C34ECA /* AppDelegate.m */,
+				37FDBA821D90E5AB00C34ECA /* Assets.xcassets */,
+				37FDBA841D90E5AB00C34ECA /* LaunchScreen.storyboard */,
+				37FDBA871D90E5AB00C34ECA /* Info.plist */,
+				37FDBA761D90E5AB00C34ECA /* Supporting Files */,
+				37FDBA8D1D90E84900C34ECA /* LoginViewController.h */,
+				37FDBA8E1D90E84900C34ECA /* LoginViewController.m */,
+				37FDBA8F1D90E84900C34ECA /* LoginViewController.xib */,
+				37A582E11D91AEEE00F4A372 /* TwitterClient.h */,
+				37A582E21D91AEEE00F4A372 /* TwitterClient.m */,
+			);
+			path = chirpy;
+			sourceTree = "<group>";
+		};
+		37FDBA761D90E5AB00C34ECA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37FDBA771D90E5AB00C34ECA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9238E863E2B413BD6870E052 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCEBCF50C9A0520B80BB479C /* libPods-chirpy.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37FDBA721D90E5AB00C34ECA /* chirpy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37FDBA8A1D90E5AB00C34ECA /* Build configuration list for PBXNativeTarget "chirpy" */;
+			buildPhases = (
+				4F27E8ACFFA5B1B47B35F92B /* [CP] Check Pods Manifest.lock */,
+				37FDBA6F1D90E5AB00C34ECA /* Sources */,
+				37FDBA701D90E5AB00C34ECA /* Frameworks */,
+				37FDBA711D90E5AB00C34ECA /* Resources */,
+				C9AF5C6ED8312634B168C4DB /* [CP] Embed Pods Frameworks */,
+				0FDA11F3840D9B0CB1E07274 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = chirpy;
+			productName = chirpy;
+			productReference = 37FDBA731D90E5AB00C34ECA /* chirpy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37FDBA6B1D90E5AB00C34ECA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = valionka;
+				TargetAttributes = {
+					37FDBA721D90E5AB00C34ECA = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 37FDBA6E1D90E5AB00C34ECA /* Build configuration list for PBXProject "chirpy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37FDBA6A1D90E5AB00C34ECA;
+			productRefGroup = 37FDBA741D90E5AB00C34ECA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37FDBA721D90E5AB00C34ECA /* chirpy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37FDBA711D90E5AB00C34ECA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37FDBA861D90E5AB00C34ECA /* LaunchScreen.storyboard in Resources */,
+				37FDBA831D90E5AB00C34ECA /* Assets.xcassets in Resources */,
+				37FDBA911D90E84900C34ECA /* LoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FDA11F3840D9B0CB1E07274 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chirpy/Pods-chirpy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F27E8ACFFA5B1B47B35F92B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C9AF5C6ED8312634B168C4DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chirpy/Pods-chirpy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37FDBA6F1D90E5AB00C34ECA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37A582E31D91AEEE00F4A372 /* TwitterClient.m in Sources */,
+				37FDBA7B1D90E5AB00C34ECA /* AppDelegate.m in Sources */,
+				37FDBA781D90E5AB00C34ECA /* main.m in Sources */,
+				37FDBA901D90E84900C34ECA /* LoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		37FDBA841D90E5AB00C34ECA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37FDBA851D90E5AB00C34ECA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37FDBA881D90E5AB00C34ECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		37FDBA891D90E5AB00C34ECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37FDBA8B1D90E5AB00C34ECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EC9C51A2F5504CDC968A3A3 /* Pods-chirpy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = chirpy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.valionka.chirpy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		37FDBA8C1D90E5AB00C34ECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51A4840E0EC05975B2504790 /* Pods-chirpy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = chirpy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.valionka.chirpy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37FDBA6E1D90E5AB00C34ECA /* Build configuration list for PBXProject "chirpy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37FDBA881D90E5AB00C34ECA /* Debug */,
+				37FDBA891D90E5AB00C34ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37FDBA8A1D90E5AB00C34ECA /* Build configuration list for PBXNativeTarget "chirpy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37FDBA8B1D90E5AB00C34ECA /* Debug */,
+				37FDBA8C1D90E5AB00C34ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37FDBA6B1D90E5AB00C34ECA /* Project object */;
+}
