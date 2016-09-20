@@ -7,20 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37A582E31D91AEEE00F4A372 /* TwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A582E21D91AEEE00F4A372 /* TwitterClient.m */; };
+		37A582E61D91DBB100F4A372 /* TwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A582E51D91DBB100F4A372 /* TwitterClient.m */; };
+		37A582EA1D91E47900F4A372 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A582E91D91E47900F4A372 /* Tweet.m */; };
+		37A582ED1D91E48600F4A372 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A582EC1D91E48600F4A372 /* User.m */; };
 		37FDBA781D90E5AB00C34ECA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDBA771D90E5AB00C34ECA /* main.m */; };
 		37FDBA7B1D90E5AB00C34ECA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDBA7A1D90E5AB00C34ECA /* AppDelegate.m */; };
 		37FDBA831D90E5AB00C34ECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FDBA821D90E5AB00C34ECA /* Assets.xcassets */; };
 		37FDBA861D90E5AB00C34ECA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FDBA841D90E5AB00C34ECA /* LaunchScreen.storyboard */; };
 		37FDBA901D90E84900C34ECA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDBA8E1D90E84900C34ECA /* LoginViewController.m */; };
 		37FDBA911D90E84900C34ECA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37FDBA8F1D90E84900C34ECA /* LoginViewController.xib */; };
-		B11D59ADAAD7E4460ADD887C /* libPods-chirpy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEBCF50C9A0520B80BB479C /* libPods-chirpy.a */; };
+		68305B0A5F6BD9A0FE6C54B7 /* libPods-chirpy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EED5811B26F8F463088A5C /* libPods-chirpy.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0EC9C51A2F5504CDC968A3A3 /* Pods-chirpy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chirpy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chirpy/Pods-chirpy.debug.xcconfig"; sourceTree = "<group>"; };
-		37A582E11D91AEEE00F4A372 /* TwitterClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterClient.h; sourceTree = "<group>"; };
-		37A582E21D91AEEE00F4A372 /* TwitterClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterClient.m; sourceTree = "<group>"; };
+		21EED5811B26F8F463088A5C /* libPods-chirpy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-chirpy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36B7C440D43962582BD703B9 /* Pods-chirpy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chirpy.release.xcconfig"; path = "Pods/Target Support Files/Pods-chirpy/Pods-chirpy.release.xcconfig"; sourceTree = "<group>"; };
+		37A582E41D91DBB100F4A372 /* TwitterClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterClient.h; sourceTree = "<group>"; };
+		37A582E51D91DBB100F4A372 /* TwitterClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterClient.m; sourceTree = "<group>"; };
+		37A582E81D91E47900F4A372 /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
+		37A582E91D91E47900F4A372 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
+		37A582EB1D91E48600F4A372 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		37A582EC1D91E48600F4A372 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		37FDBA731D90E5AB00C34ECA /* chirpy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chirpy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FDBA771D90E5AB00C34ECA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37FDBA791D90E5AB00C34ECA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,8 +38,7 @@
 		37FDBA8D1D90E84900C34ECA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		37FDBA8E1D90E84900C34ECA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		37FDBA8F1D90E84900C34ECA /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		51A4840E0EC05975B2504790 /* Pods-chirpy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chirpy.release.xcconfig"; path = "Pods/Target Support Files/Pods-chirpy/Pods-chirpy.release.xcconfig"; sourceTree = "<group>"; };
-		DCEBCF50C9A0520B80BB479C /* libPods-chirpy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-chirpy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4250F7234CB2AA67A50498D5 /* Pods-chirpy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chirpy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chirpy/Pods-chirpy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,20 +46,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B11D59ADAAD7E4460ADD887C /* libPods-chirpy.a in Frameworks */,
+				68305B0A5F6BD9A0FE6C54B7 /* libPods-chirpy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B1C29DB0EB6B5FC0DA65E1F /* Pods */ = {
+		0A39EC63E1D9B87732C973F7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0EC9C51A2F5504CDC968A3A3 /* Pods-chirpy.debug.xcconfig */,
-				51A4840E0EC05975B2504790 /* Pods-chirpy.release.xcconfig */,
+				4250F7234CB2AA67A50498D5 /* Pods-chirpy.debug.xcconfig */,
+				36B7C440D43962582BD703B9 /* Pods-chirpy.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		37A582E71D91E45000F4A372 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				37A582E81D91E47900F4A372 /* Tweet.h */,
+				37A582E91D91E47900F4A372 /* Tweet.m */,
+				37A582EB1D91E48600F4A372 /* User.h */,
+				37A582EC1D91E48600F4A372 /* User.m */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 		37FDBA6A1D90E5AB00C34ECA = {
@@ -61,8 +78,8 @@
 			children = (
 				37FDBA751D90E5AB00C34ECA /* chirpy */,
 				37FDBA741D90E5AB00C34ECA /* Products */,
-				2B1C29DB0EB6B5FC0DA65E1F /* Pods */,
-				9238E863E2B413BD6870E052 /* Frameworks */,
+				0A39EC63E1D9B87732C973F7 /* Pods */,
+				C94DAAC8F98DF80A3117F81B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +94,7 @@
 		37FDBA751D90E5AB00C34ECA /* chirpy */ = {
 			isa = PBXGroup;
 			children = (
+				37A582E71D91E45000F4A372 /* models */,
 				37FDBA791D90E5AB00C34ECA /* AppDelegate.h */,
 				37FDBA7A1D90E5AB00C34ECA /* AppDelegate.m */,
 				37FDBA821D90E5AB00C34ECA /* Assets.xcassets */,
@@ -86,8 +104,8 @@
 				37FDBA8D1D90E84900C34ECA /* LoginViewController.h */,
 				37FDBA8E1D90E84900C34ECA /* LoginViewController.m */,
 				37FDBA8F1D90E84900C34ECA /* LoginViewController.xib */,
-				37A582E11D91AEEE00F4A372 /* TwitterClient.h */,
-				37A582E21D91AEEE00F4A372 /* TwitterClient.m */,
+				37A582E41D91DBB100F4A372 /* TwitterClient.h */,
+				37A582E51D91DBB100F4A372 /* TwitterClient.m */,
 			);
 			path = chirpy;
 			sourceTree = "<group>";
@@ -100,10 +118,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9238E863E2B413BD6870E052 /* Frameworks */ = {
+		C94DAAC8F98DF80A3117F81B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DCEBCF50C9A0520B80BB479C /* libPods-chirpy.a */,
+				21EED5811B26F8F463088A5C /* libPods-chirpy.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,12 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37FDBA8A1D90E5AB00C34ECA /* Build configuration list for PBXNativeTarget "chirpy" */;
 			buildPhases = (
-				4F27E8ACFFA5B1B47B35F92B /* [CP] Check Pods Manifest.lock */,
+				F20FF6F2D13D659E1B2EF704 /* [CP] Check Pods Manifest.lock */,
 				37FDBA6F1D90E5AB00C34ECA /* Sources */,
 				37FDBA701D90E5AB00C34ECA /* Frameworks */,
 				37FDBA711D90E5AB00C34ECA /* Resources */,
-				C9AF5C6ED8312634B168C4DB /* [CP] Embed Pods Frameworks */,
-				0FDA11F3840D9B0CB1E07274 /* [CP] Copy Pods Resources */,
+				CCE9E062AED90FE9F5F261E6 /* [CP] Embed Pods Frameworks */,
+				74D48C3927CE80F06E3E2BB6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,7 +196,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0FDA11F3840D9B0CB1E07274 /* [CP] Copy Pods Resources */ = {
+		74D48C3927CE80F06E3E2BB6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -193,22 +211,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chirpy/Pods-chirpy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4F27E8ACFFA5B1B47B35F92B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C9AF5C6ED8312634B168C4DB /* [CP] Embed Pods Frameworks */ = {
+		CCE9E062AED90FE9F5F261E6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -223,6 +226,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chirpy/Pods-chirpy-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F20FF6F2D13D659E1B2EF704 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -230,8 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A582E31D91AEEE00F4A372 /* TwitterClient.m in Sources */,
+				37A582E61D91DBB100F4A372 /* TwitterClient.m in Sources */,
 				37FDBA7B1D90E5AB00C34ECA /* AppDelegate.m in Sources */,
+				37A582ED1D91E48600F4A372 /* User.m in Sources */,
+				37A582EA1D91E47900F4A372 /* Tweet.m in Sources */,
 				37FDBA781D90E5AB00C34ECA /* main.m in Sources */,
 				37FDBA901D90E84900C34ECA /* LoginViewController.m in Sources */,
 			);
@@ -343,7 +363,7 @@
 		};
 		37FDBA8B1D90E5AB00C34ECA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EC9C51A2F5504CDC968A3A3 /* Pods-chirpy.debug.xcconfig */;
+			baseConfigurationReference = 4250F7234CB2AA67A50498D5 /* Pods-chirpy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = chirpy/Info.plist;
@@ -355,7 +375,7 @@
 		};
 		37FDBA8C1D90E5AB00C34ECA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51A4840E0EC05975B2504790 /* Pods-chirpy.release.xcconfig */;
+			baseConfigurationReference = 36B7C440D43962582BD703B9 /* Pods-chirpy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = chirpy/Info.plist;

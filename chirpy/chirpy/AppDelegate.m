@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "LoginViewController.h"
 #import "TwitterClient.h"
+#import "User.h"
+#import "Tweet.h"
 
 @interface AppDelegate ()
 
@@ -55,20 +57,8 @@
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    [[TwitterClient sharedInstance] fetchAccessTokenWithPath:@"oauth/access_token" method:@"POST" requestToken:[BDBOAuthToken tokenWithQueryString:url.query] success:^(BDBOAuthToken *accessToken) {
-        NSLog(@"got the access token");
-        
-        [[TwitterClient sharedInstance].requestSerializer saveAccessToken:accessToken];
-        
-        [[TwitterClient sharedInstance] GET:@"1.1/account/verify_credentials.json"
-         parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-             NSLog(@"current user: %@", responseObject);
-         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-             NSLog(@"Failed to get credentials");
-         }];
-    } failure:^(NSError *error) {
-        NSLog(@" failed to get the access token");
-    }];
+    
+     [[TwitterClient sharedInstance] openURL:url];
     
     return YES;
 }

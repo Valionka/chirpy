@@ -6,9 +6,13 @@
 //  Copyright © 2016 valionka. All rights reserved.
 //
 
-#import "BDBOAuth1RequestOperationManager.h"
+#import "BDBOAuth1SessionManager.h"
+#import "User.h"
 
-@interface TwitterClient : BDBOAuth1RequestOperationManager
+@interface TwitterClient : BDBOAuth1SessionManager
+
+- (void)loginWithCompletion:(void (^)(User *user, NSError *error))completion;
+- (void)openURL:(NSURL *)url;
 
 + (TwitterClient *)sharedInstance;
 
