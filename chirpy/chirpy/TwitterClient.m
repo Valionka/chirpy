@@ -7,6 +7,7 @@
 //
 
 #import "TwitterClient.h"
+#import "Tweet.h"
 
 NSString * const kTwitterConsumerKey = @"4upW03xXgen3emlYyk4OYEhkv";
 NSString * const kTwitterConsumerSecret = @"YWW2Zvy5qHWMqvjvYZ9MDUbiZ52KUu8cBGygLwdEp5Q4m4czjb";
@@ -58,6 +59,7 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
         [self GET:@"1.1/account/verify_credentials.json" parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
             NSLog(@"current user: %@", responseObject);
             User *user = [[User alloc] initWithDictionary:responseObject];
+            [User setCurrentUser:user];
             NSLog(@"current user: %@", user.name);
             self.loginCompletion(user, nil);
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -65,11 +67,44 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
             self.loginCompletion(nil, error);
         }];
         
+        [[TwitterClient sharedInstance] GET:@"1.1/statuses/home_timeline.json" parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+            //NSLog(@"tweets: %@", responseObject);
+            NSArray *tweets = [Tweet tweetsWithArray:responseObject];
+            
+            for(Tweet *tweet in tweets) {
+                NSLog(@"tweet: %@, created: %@", tweet.text, tweet.createdAt);
+            }
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"Failed to get tweets");
+        }];
+        
+        
+        
     } failure:^(NSError *error) {
         NSLog(@" failed to get the access token");
         self.loginCompletion(nil, error);
         
     }];
+}
+
+- (NSArray *) getTweetsForUser: (User *)user {
+
+    __block NSArray *tweets = nil;
+    [[TwitterClient sharedInstance] GET:@"1.1/statuses/home_timeline.json" parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        //NSLog(@"tweets: %@", responseObject);
+         tweets = [Tweet tweetsWithArray:responseObject];
+       
+        for(Tweet *tweet in tweets) {
+            NSLog(@"tweet: %@, created: %@", tweet.text, tweet.createdAt);
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"Failed to get tweets");
+    }];
+    
+    return tweets;
+    
 }
 
 @end

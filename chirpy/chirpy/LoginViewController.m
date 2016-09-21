@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import "TwitterClient.h"
+#import "User.h"
+#import "TweetsViewController.h"
 
 @interface LoginViewController ()
 
@@ -37,7 +39,11 @@
 - (IBAction)onLogIn:(id)sender {
     [[TwitterClient sharedInstance] loginWithCompletion:^(User *user, NSError *error) {
         if(user != nil){
-            //display ok
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            
+            UINavigationController *tweetNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"NavigationController"];
+            [self presentViewController:tweetNavigationController animated:YES completion:nil];
+
         } else {
             // display error
         }

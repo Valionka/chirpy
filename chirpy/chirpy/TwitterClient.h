@@ -13,6 +13,7 @@
 
 - (void)loginWithCompletion:(void (^)(User *user, NSError *error))completion;
 - (void)openURL:(NSURL *)url;
+- (NSArray *) getTweetsForUser: (User *)user;
 
 + (TwitterClient *)sharedInstance;
 
