@@ -92,11 +92,4 @@ NSString * const kTokensKey = @"kTokensKey";
     
 }
 
-+ (void)storeToken:(BDBOAuth1Credential *)token {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSData *data = [NSJSONSerialization dataWithJSONObject:token options:0 error:NULL];
-    [userDefaults setObject:data forKey:kTokensKey];
-}
-
-
 @end
