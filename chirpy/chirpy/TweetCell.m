@@ -27,7 +27,10 @@
 - (void)setTweet:(Tweet *)tweet {
     self.tweetLabel.text = tweet.text;
     self.nameLabel.text = tweet.user.name;
-    //self.dateLabel.text = tweet.createdAt;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MMM dd HH:mm"];
+    
+    self.dateLabel.text = [dateFormatter stringFromDate:tweet.createdAt];
     
     NSString *url = [NSString stringWithFormat:@"%@", tweet.user.profileImageUrl];
     
