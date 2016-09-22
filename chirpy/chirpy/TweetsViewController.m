@@ -78,7 +78,9 @@
     
 }
 
-
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    //self.navigationItem.backBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStyleDone target:nil action:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
