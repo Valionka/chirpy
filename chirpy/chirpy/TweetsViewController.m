@@ -40,11 +40,9 @@
 - (void)onRefresh {
     [self getTweetsForUser:[User currentUser]];
     [self.refreshControl endRefreshing];
-    //[self.tableView reloadData];
 }
 
 - (IBAction)onLogout:(UIButton *)sender {
-   // [User removeUser:[User currentUser]];
     [User removeUser:[User currentUser] view:self];
 }
 
@@ -60,20 +58,7 @@
     Tweet *tweet = self.tweets[indexPath.row];
     [cell setTweet:tweet];
     
- /*   MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell"];
-    
-    NSDictionary *movie = self.movies[indexPath.row];
-    
-    cell.titleLabel.text = movie[@"title"];
-    cell.synopsisLabel.text = movie[@"overview"];
-    
-    NSString *url = [NSString stringWithFormat:@"https://image.tmdb.org/t/p/w154%@", movie[@"poster_path"]];
-    
-    [cell.movieImage setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"defaultMovie.png"]];
-    
     return cell;
-  */
-   return cell;
 }
 
 - (void) getTweetsForUser: (User *)user {
