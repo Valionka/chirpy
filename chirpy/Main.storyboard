@@ -60,8 +60,8 @@
                                         <constraint firstItem="yRD-4W-oSf" firstAttribute="leading" secondItem="oFB-vz-6kl" secondAttribute="leadingMargin" constant="3" id="eqO-7n-Pd1"/>
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="u1P-9Y-xKN" secondAttribute="trailing" constant="10" id="fOD-Cx-c0j"/>
                                         <constraint firstItem="yRD-4W-oSf" firstAttribute="top" secondItem="oFB-vz-6kl" secondAttribute="topMargin" constant="3" id="nBT-kt-qzI"/>
-                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="SDI-Xb-Vfn" secondAttribute="bottom" constant="6" id="njH-2I-is5"/>
-                                        <constraint firstItem="SDI-Xb-Vfn" firstAttribute="top" secondItem="jgY-Nb-XSW" secondAttribute="bottom" constant="6" id="tU2-ul-6uc"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="SDI-Xb-Vfn" secondAttribute="bottom" constant="3" id="njH-2I-is5"/>
+                                        <constraint firstItem="SDI-Xb-Vfn" firstAttribute="top" secondItem="jgY-Nb-XSW" secondAttribute="bottom" constant="4" id="tU2-ul-6uc"/>
                                         <constraint firstItem="u1P-9Y-xKN" firstAttribute="leading" secondItem="jgY-Nb-XSW" secondAttribute="trailing" constant="8" id="yR3-Au-3gy"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -150,11 +150,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uU9-db-NEi" firstAttribute="leading" secondItem="Xwe-vX-ec4" secondAttribute="leading" constant="10" id="20M-3P-ljF"/>
+                            <constraint firstItem="uU9-db-NEi" firstAttribute="leading" secondItem="Xwe-vX-ec4" secondAttribute="leading" constant="15" id="20M-3P-ljF"/>
                             <constraint firstItem="p42-9a-dQt" firstAttribute="top" secondItem="KVa-4n-0cs" secondAttribute="bottom" constant="8" id="D5G-Uu-Uuz"/>
                             <constraint firstItem="uU9-db-NEi" firstAttribute="top" secondItem="p42-9a-dQt" secondAttribute="bottom" constant="14" id="E7a-Jl-7al"/>
                             <constraint firstItem="8lC-sV-hYm" firstAttribute="leading" secondItem="p42-9a-dQt" secondAttribute="trailing" constant="6" id="ER0-cD-U96"/>
-                            <constraint firstAttribute="trailing" secondItem="uU9-db-NEi" secondAttribute="trailing" constant="10" id="HQ1-Ai-hlM"/>
+                            <constraint firstAttribute="trailing" secondItem="uU9-db-NEi" secondAttribute="trailing" constant="15" id="HQ1-Ai-hlM"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="JDc-9n-iak" secondAttribute="trailing" constant="10" id="LQn-Nk-RY6"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="8lC-sV-hYm" secondAttribute="trailing" constant="10" id="S3q-tx-xRw"/>
                             <constraint firstItem="8lC-sV-hYm" firstAttribute="top" secondItem="KVa-4n-0cs" secondAttribute="bottom" constant="12" id="biK-4O-juW"/>

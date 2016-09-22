@@ -36,6 +36,8 @@
     NSString *url = [NSString stringWithFormat:@"%@", user.profileImageUrl];
     [self.userImage setImageWithURL:[NSURL URLWithString:url]];
     
+    [self.tweetText becomeFirstResponder];
+    
     [[UITextView appearance] setTintColor:[UIColor blueColor]];
 }
 
