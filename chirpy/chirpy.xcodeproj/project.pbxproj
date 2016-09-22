@@ -36,6 +36,7 @@
 		37A582F21D92414D00F4A372 /* TweetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsViewController.m; sourceTree = "<group>"; };
 		37A5831A1D9322D900F4A372 /* TweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetCell.h; sourceTree = "<group>"; };
 		37A5831B1D9322D900F4A372 /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetCell.m; sourceTree = "<group>"; };
+		37A5831D1D93863700F4A372 /* chirpy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = chirpy.entitlements; sourceTree = "<group>"; };
 		37FDBA731D90E5AB00C34ECA /* chirpy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chirpy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FDBA771D90E5AB00C34ECA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37FDBA791D90E5AB00C34ECA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		37FDBA751D90E5AB00C34ECA /* chirpy */ = {
 			isa = PBXGroup;
 			children = (
+				37A5831D1D93863700F4A372 /* chirpy.entitlements */,
 				37A582F01D92410300F4A372 /* ViewControllers */,
 				37A582E71D91E45000F4A372 /* models */,
 				37FDBA791D90E5AB00C34ECA /* AppDelegate.h */,
@@ -181,7 +183,13 @@
 				TargetAttributes = {
 					37FDBA721D90E5AB00C34ECA = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5J66Y4DMNQ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -390,6 +398,8 @@
 			baseConfigurationReference = 4250F7234CB2AA67A50498D5 /* Pods-chirpy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = chirpy/chirpy.entitlements;
+				DEVELOPMENT_TEAM = 5J66Y4DMNQ;
 				INFOPLIST_FILE = chirpy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.valionka.chirpy;
@@ -402,6 +412,8 @@
 			baseConfigurationReference = 36B7C440D43962582BD703B9 /* Pods-chirpy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = chirpy/chirpy.entitlements;
+				DEVELOPMENT_TEAM = 5J66Y4DMNQ;
 				INFOPLIST_FILE = chirpy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.valionka.chirpy;

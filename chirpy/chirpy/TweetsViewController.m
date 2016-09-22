@@ -8,6 +8,7 @@
 
 #import "TweetsViewController.h"
 #import "TwitterClient.h"
+#import "TweetCell.h"
 
 @interface TweetsViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -32,14 +33,14 @@
     [self.refreshControl addTarget:self action:@selector(onRefresh) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
     
-    self.tweets = [[TwitterClient sharedInstance] getTweetsForUser:[User currentUser]];
+    [self getTweetsForUser:[User currentUser]];
     
-    // Do any additional setup after loading the view.
 }
 
 - (void)onRefresh {
-    self.tweets = [[TwitterClient sharedInstance] getTweetsForUser:[User currentUser]];
+    [self getTweetsForUser:[User currentUser]];
     [self.refreshControl endRefreshing];
+    //[self.tableView reloadData];
 }
 
 - (IBAction)onLogout:(UIButton *)sender {
@@ -49,11 +50,15 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //return self.movies.count;
-    return 0;
+    return self.tweets.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tweetCell"];
+    
+    Tweet *tweet = self.tweets[indexPath.row];
+    [cell setTweet:tweet];
     
  /*   MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell"];
     
@@ -68,7 +73,24 @@
     
     return cell;
   */
-    return nil;
+   return cell;
+}
+
+- (void) getTweetsForUser: (User *)user {
+    
+    [[TwitterClient sharedInstance] GET:@"1.1/statuses/home_timeline.json" parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        //NSLog(@"tweets: %@", responseObject);
+        self.tweets = [Tweet tweetsWithArray:responseObject];
+        [self.tableView reloadData];
+        
+        for(Tweet *tweet in self.tweets) {
+            NSLog(@"tweet: %@, created: %@", tweet.text, tweet.createdAt);
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"Failed to get tweets");
+    }];
+    
 }
 
 
