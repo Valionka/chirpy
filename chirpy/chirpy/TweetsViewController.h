@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
+#import "ComposeViewController.h"
 
-@interface TweetsViewController : UIViewController
+@interface TweetsViewController : UIViewController  <UITableViewDelegate, UITableViewDataSource, ComposeViewControllerDelegate>
 
+- (void) getTweetsForUser: (User *)user;
+- (void)didTweet:(Tweet *)tweet;
 @end

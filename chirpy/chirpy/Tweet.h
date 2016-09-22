@@ -17,6 +17,7 @@
 
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
+- (id) initWithText:(NSString *)text;
 
 + (NSArray *)tweetsWithArray:(NSArray *)array;
 

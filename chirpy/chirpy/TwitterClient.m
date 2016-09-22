@@ -76,5 +76,26 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
 }
 
 
+- (void)sendTweetWithParams:(NSDictionary *)params tweet:(Tweet *)tweet completion:(void (^)(NSString *, NSError *))completion {
+    NSString *postUrl;
+    
+   
+    postUrl = [NSString stringWithFormat:@"1.1/statuses/update.json?status=%@", tweet.text];
+    [self POST:[postUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        completion(responseObject[@"id_str"], nil);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        completion(nil, error);
+    }];
+    
+    /*[self POST:[postUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //        NSLog([NSString stringWithFormat:@"succssfully tweeted: %@", responseObject]);
+        completion(responseObject[@"id_str"], nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(nil, error);
+    }];
+     */
+}
+
+
 
 @end

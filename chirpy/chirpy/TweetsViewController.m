@@ -9,8 +9,9 @@
 #import "TweetsViewController.h"
 #import "TwitterClient.h"
 #import "TweetCell.h"
+#import "ComposeViewController.h"
 
-@interface TweetsViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TweetsViewController ()
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
@@ -42,6 +43,13 @@
     [self.refreshControl endRefreshing];
 }
 
+- (void)didTweet:(Tweet *)tweet {
+    NSMutableArray *temp = [NSMutableArray arrayWithArray:self.tweets];
+    [temp insertObject:tweet atIndex:0];
+    self.tweets = [temp copy];
+    [self.tableView reloadData];
+}
+
 - (IBAction)onLogout:(UIButton *)sender {
     [User removeUser:[User currentUser] view:self];
 }
@@ -68,9 +76,10 @@
         self.tweets = [Tweet tweetsWithArray:responseObject];
         [self.tableView reloadData];
         
-        for(Tweet *tweet in self.tweets) {
+       /* for(Tweet *tweet in self.tweets) {
             NSLog(@"tweet: %@, created: %@", tweet.text, tweet.createdAt);
         }
+        */
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"Failed to get tweets");
@@ -80,11 +89,14 @@
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     self.navigationItem.backBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStyleDone target:nil action:nil];
+    ComposeViewController *cvc = segue.destinationViewController;
+    cvc.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 /*
