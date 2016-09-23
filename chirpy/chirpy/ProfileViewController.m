@@ -22,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *followingCount;
 @property (weak, nonatomic) IBOutlet UILabel *followersCount;
 
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
+
 @end
 
 @implementation ProfileViewController
@@ -41,6 +43,11 @@
     NSString *url = [NSString stringWithFormat:@"%@", user.profileImageUrl];
     [self.userIMage setImageWithURL:[NSURL URLWithString:url]];
     
+    // refresh control
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(onRefresh) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:self.refreshControl atIndex:0];
+    
     [self getTweetsForUser:[User currentUser]];
 
 }
@@ -50,7 +57,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (void)onRefresh {
+    [self getTweetsForUser:[User currentUser]];
+    [self.refreshControl endRefreshing];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.tweets.count;
