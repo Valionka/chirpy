@@ -25,23 +25,21 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     self.window =[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    UINavigationController *tweetNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"HamburgerViewController"];
-    self.window.rootViewController = tweetNavigationController;
     
-    
-  /*  User *user = [User currentUser];
+   User *user = [User currentUser];
     
     if(user == nil){
         NSLog(@"No user");
         self.window.rootViewController =[[LoginViewController alloc] init];
     } else {
+        UINavigationController *tweetNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"HamburgerViewController"];
+        self.window.rootViewController = tweetNavigationController;
         
-        
-        UINavigationController *tweetNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"NavigationController"];
+       /* UINavigationController *tweetNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"NavigationController"];
          self.window.rootViewController = tweetNavigationController;
+        */
     }
- 
-    */
+    
     [self.window makeKeyAndVisible];
     
     return YES;

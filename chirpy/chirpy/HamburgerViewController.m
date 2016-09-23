@@ -31,7 +31,7 @@
    // menuNavigationControler.navigationBar.barTintColor = [UIColor colorWithRed:85/255.0f green:172/255.0f blue:238/255.0f alpha:1.0f];
     menuNavigationController.navigationBar.barTintColor = nil;
     //menuNavigationController.navigationBar.topItem.title = @"Menu";
-    menuNavigationController.navigationBar.tintColor = [UIColor whiteColor];
+    //menuNavigationController.navigationBar.tintColor = [UIColor whiteColor];
    // [menuNavigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     menuNavigationController.navigationBar.translucent = NO;
     

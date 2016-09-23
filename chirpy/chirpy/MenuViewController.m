@@ -54,12 +54,15 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuCell"];
     
     if(indexPath.row == 0){
-        cell.backgroundColor = [UIColor greenColor];
+        //cell.backgroundColor = [UIColor greenColor];
+        cell.textLabel.text = @"Timeline";
     } else if (indexPath.row == 1){
-        cell.backgroundColor = [UIColor blueColor];
+        cell.textLabel.text = @"Profile";
     } else {
-        cell.backgroundColor = [UIColor redColor];
+        cell.textLabel.text = @"Mentions";
     }
+    
+    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
     
     return cell;
 
