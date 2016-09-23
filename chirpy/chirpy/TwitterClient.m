@@ -96,6 +96,18 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
      */
 }
 
+- (void)getUserTimeline:(User *)user completion:(void (^)(NSArray *tweets, NSError *error))completion {
+    BDBOAuth1SessionManager *twitterClient = [TwitterClient sharedInstance];
+    
+    NSString *getUrl = [NSString stringWithFormat:@"1.1/statuses/user_timeline.json?include_rts=1&count=20&include_my_retweet=1&screen_name=%@", user.screenname];
+    [twitterClient GET:getUrl parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        NSArray *tweets = [Tweet tweetsWithArray:responseObject];
+        completion(tweets, nil);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        completion(nil, error);
+    }];
+}
+
 
 
 @end

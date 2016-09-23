@@ -15,6 +15,7 @@
 - (void)loginWithCompletion:(void (^)(User *user, NSError *error))completion;
 - (void)openURL:(NSURL *)url;
 - (void)sendTweetWithParams:(NSDictionary *)params tweet:(Tweet *)tweet completion:(void (^)(NSString *tweetIdStr, NSError *error))completion;
+- (void)getUserTimeline:(User *)user completion:(void (^)(NSArray *tweets, NSError *error))completion;
 
 
 + (TwitterClient *)sharedInstance;
