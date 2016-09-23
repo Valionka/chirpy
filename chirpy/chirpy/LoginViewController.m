@@ -10,6 +10,7 @@
 #import "TwitterClient.h"
 #import "User.h"
 #import "TweetsViewController.h"
+#import "AppDelegate.h"
 
 @interface LoginViewController ()
 
@@ -41,8 +42,13 @@
         if(user != nil){
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             
-            UINavigationController *tweetNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"NavigationController"];
+            AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+           UINavigationController *hamburgerNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"HamburgerViewController"];
+            delegate.window.rootViewController = hamburgerNavigationController;
+
+           /* UINavigationController *tweetNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"NavigationController"];
             [self presentViewController:tweetNavigationController animated:YES completion:nil];
+            */
 
         } else {
             // display error

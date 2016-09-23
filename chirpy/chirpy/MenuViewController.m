@@ -9,6 +9,7 @@
 #import "MenuViewController.h"
 #import "TweetsViewController.h"
 #import "ContentViewController.h"
+#import "ProfileViewController.h"
 
 @interface MenuViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -27,6 +28,7 @@
     self.tableView.dataSource = self;
     
     [self initViewControllers];
+   // [self.tableView reloadData];
     
 }
 
@@ -39,8 +41,9 @@
    
     ContentViewController *cvc = [storyBoard instantiateViewControllerWithIdentifier:@"contentViewController"];
     
-    self.viewControllers = [NSArray arrayWithObjects:tweetsNavigationController, cvc, nil];
+    UINavigationController *pfv = [storyBoard instantiateViewControllerWithIdentifier:@"navigationProfileViewController"];
     
+    self.viewControllers = [NSArray arrayWithObjects:tweetsNavigationController, pfv, cvc, nil];
     
     self.currentViewController = tweetsNavigationController;
     [self.hambergerViewController setContentViewController:self.currentViewController];
