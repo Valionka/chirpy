@@ -24,9 +24,12 @@
     // Override point for customization after application launch.
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
-    
     self.window =[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    User *user = [User currentUser];
+    UINavigationController *tweetNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"HamburgerViewController"];
+    self.window.rootViewController = tweetNavigationController;
+    
+    
+  /*  User *user = [User currentUser];
     
     if(user == nil){
         NSLog(@"No user");
@@ -38,7 +41,7 @@
          self.window.rootViewController = tweetNavigationController;
     }
  
-    
+    */
     [self.window makeKeyAndVisible];
     
     return YES;
