@@ -9,11 +9,18 @@
 #import "ProfileViewController.h"
 #import "TweetCell.h"
 #import "TwitterClient.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface ProfileViewController ()
 
 @property (nonatomic, strong) NSArray* tweets;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIImageView *userIMage;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *screenName;
+@property (weak, nonatomic) IBOutlet UILabel *tagLine;
+@property (weak, nonatomic) IBOutlet UILabel *followingCount;
+@property (weak, nonatomic) IBOutlet UILabel *followersCount;
 
 @end
 
@@ -24,6 +31,15 @@
 
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    
+    User *user = [User currentUser];
+    self.name.text = user.name;
+    self.screenName.text = user.screenname;
+    self.tagLine.text = user.tagline;
+    self.followingCount.text = [NSString stringWithFormat:@"%ld", (long)user.friendCount];
+    self.followersCount.text = [NSString stringWithFormat:@"%ld", (long)user.followerCount];
+    NSString *url = [NSString stringWithFormat:@"%@", user.profileImageUrl];
+    [self.userIMage setImageWithURL:[NSURL URLWithString:url]];
     
     [self getTweetsForUser:[User currentUser]];
 
