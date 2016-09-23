@@ -27,8 +27,16 @@
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     self.menuViewController = [storyBoard instantiateViewControllerWithIdentifier:@"MenuViewController"];
+    UINavigationController *menuNavigationController = [[UINavigationController alloc] initWithRootViewController:self.menuViewController];
+   // menuNavigationControler.navigationBar.barTintColor = [UIColor colorWithRed:85/255.0f green:172/255.0f blue:238/255.0f alpha:1.0f];
+    menuNavigationController.navigationBar.barTintColor = nil;
+    //menuNavigationController.navigationBar.topItem.title = @"Menu";
+    menuNavigationController.navigationBar.tintColor = [UIColor whiteColor];
+   // [menuNavigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    menuNavigationController.navigationBar.translucent = NO;
+    
     self.menuViewController.hambergerViewController = self;
-    [self.menuView addSubview:self.menuViewController.view];
+    [self.menuView addSubview:menuNavigationController.view];
     
 }
 
