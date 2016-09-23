@@ -226,7 +226,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="71" id="nJu-La-i02">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="71" id="nJu-La-i02" customClass="TweetCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="71"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nJu-La-i02" id="wmu-ca-yCX">
@@ -272,6 +272,12 @@
                                                 <constraint firstItem="RnH-jL-xev" firstAttribute="leading" secondItem="YbI-qk-3xc" secondAttribute="trailing" constant="3" id="u7J-dn-GQW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="aDC-xd-0Za" id="1gu-Kh-D0f"/>
+                                            <outlet property="nameLabel" destination="RnH-jL-xev" id="NGS-7N-aR6"/>
+                                            <outlet property="tweetLabel" destination="mbj-N9-Ck0" id="Sc1-NL-UwV"/>
+                                            <outlet property="userImage" destination="YbI-qk-3xc" id="gfT-Uo-v8B"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -293,6 +299,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dLE-jW-9yw"/>
+                    <connections>
+                        <outlet property="tableView" destination="E1R-Z3-FQ8" id="N6Q-BW-fXz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wlN-Mj-PX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
