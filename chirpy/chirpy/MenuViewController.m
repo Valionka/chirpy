@@ -17,6 +17,8 @@
 @property (strong, nonatomic) NSArray *viewControllers;
 @property (strong, nonatomic) UIViewController *currentViewController;
 
+@property (weak, nonatomic) TweetsViewController *tvc;
+
 @end
 
 @implementation MenuViewController
@@ -38,12 +40,16 @@
     
     // init the tweets view controller
     UINavigationController *tweetsNavigationController = [storyBoard instantiateViewControllerWithIdentifier:@"NavigationController"];
-   
+    
+     UINavigationController *mentionsNavigationController = [storyBoard instantiateViewControllerWithIdentifier:@"NavigationController"];
+    
+     self.tvc = [mentionsNavigationController topViewController];
+    
     ContentViewController *cvc = [storyBoard instantiateViewControllerWithIdentifier:@"contentViewController"];
     
     UINavigationController *pfv = [storyBoard instantiateViewControllerWithIdentifier:@"navigationProfileViewController"];
     
-    self.viewControllers = [NSArray arrayWithObjects:tweetsNavigationController, pfv, cvc, nil];
+    self.viewControllers = [NSArray arrayWithObjects:tweetsNavigationController, pfv, mentionsNavigationController, nil];
     
     self.currentViewController = tweetsNavigationController;
     [self.hambergerViewController setContentViewController:self.currentViewController];
@@ -76,6 +82,11 @@
     
     if(indexPath.row < 3){
         [self.hambergerViewController setContentViewController:self.viewControllers[indexPath.row]];
+    }
+    if(indexPath.row == 2){
+        self.tvc.isMentions = YES;
+    } else {
+        self.tvc.isMentions = NO;
     }
 
 }

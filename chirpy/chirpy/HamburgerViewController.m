@@ -8,6 +8,8 @@
 
 #import "HamburgerViewController.h"
 #import "MenuViewController.h"
+#import "User.h"
+
 
 @interface HamburgerViewController ()
 
@@ -50,6 +52,7 @@
     contentViewController.view.frame = self.contentView.bounds;
     [self.contentView addSubview:contentViewController.view];
     [contentViewController didMoveToParentViewController:self];
+   
 }
 
 - (void) openMenu{

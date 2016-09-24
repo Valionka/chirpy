@@ -70,20 +70,26 @@
 }
 
 - (void) getTweetsForUser: (User *)user {
-    
-    [[TwitterClient sharedInstance] GET:@"1.1/statuses/home_timeline.json" parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-        //NSLog(@"tweets: %@", responseObject);
-        self.tweets = [Tweet tweetsWithArray:responseObject];
-        [self.tableView reloadData];
-        
-       /* for(Tweet *tweet in self.tweets) {
-            NSLog(@"tweet: %@, created: %@", tweet.text, tweet.createdAt);
-        }
-        */
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"Failed to get tweets");
-    }];
+    if(self.isMentions){
+        [[TwitterClient sharedInstance] getMentionsTimeline:^(NSArray *tweets, NSError *error) {
+            self.tweets = tweets;
+            [self.tableView reloadData];
+        }];
+    } else {
+        [[TwitterClient sharedInstance] GET:@"1.1/statuses/home_timeline.json" parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+            //NSLog(@"tweets: %@", responseObject);
+            self.tweets = [Tweet tweetsWithArray:responseObject];
+            [self.tableView reloadData];
+            
+            for(Tweet *tweet in self.tweets) {
+                NSLog(@"tweet: %@, created: %@", tweet.text, tweet.createdAt);
+            }
+            
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"Failed to get tweets");
+        }];
+    }
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

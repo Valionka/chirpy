@@ -108,6 +108,15 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
     }];
 }
 
+- (void)getMentionsTimeline:(void (^)(NSArray *tweets, NSError *error))completion {
+    [self GET:@"1.1/statuses/mentions_timeline.json?include_my_retweet=1" parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        NSArray *tweets = [Tweet tweetsWithArray:responseObject];
+        completion(tweets, nil);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        completion(nil, error);
+    }];
+}
+
 
 
 @end
