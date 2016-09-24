@@ -40,10 +40,14 @@
     
     // init the tweets view controller
     UINavigationController *tweetsNavigationController = [storyBoard instantiateViewControllerWithIdentifier:@"NavigationController"];
+    TweetsViewController *tvc = [tweetsNavigationController topViewController];
+    tvc.isMentions = NO;
+    
     
      UINavigationController *mentionsNavigationController = [storyBoard instantiateViewControllerWithIdentifier:@"NavigationController"];
     
-     self.tvc = [mentionsNavigationController topViewController];
+    TweetsViewController *mvc = [mentionsNavigationController topViewController];
+    mvc.isMentions = YES;
     
     ContentViewController *cvc = [storyBoard instantiateViewControllerWithIdentifier:@"contentViewController"];
     
@@ -83,12 +87,6 @@
     if(indexPath.row < 3){
         [self.hambergerViewController setContentViewController:self.viewControllers[indexPath.row]];
     }
-    if(indexPath.row == 2){
-        self.tvc.isMentions = YES;
-    } else {
-        self.tvc.isMentions = NO;
-    }
-
 }
 
 - (void)didReceiveMemoryWarning {
