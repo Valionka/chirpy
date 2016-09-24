@@ -241,7 +241,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxK-Gg-xsB">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="cwL-G0-9AY"/>
-                                                <constraint firstAttribute="width" constant="20" id="nMC-Ik-j5u"/>
+                                                <constraint firstAttribute="width" constant="30" id="nMC-Ik-j5u"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <nil key="textColor"/>
@@ -285,7 +285,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7W-HD-yre">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="Jcc-76-fxT"/>
+                                                <constraint firstAttribute="width" constant="30" id="Jcc-76-fxT"/>
                                                 <constraint firstAttribute="height" constant="21" id="ZxV-MP-ODl"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -310,9 +310,9 @@
                                         <constraint firstItem="UoC-83-R9k" firstAttribute="top" secondItem="ZvJ-tp-jJP" secondAttribute="bottom" constant="4" id="eGj-4o-gZd"/>
                                         <constraint firstAttribute="bottom" secondItem="Tut-tF-5q3" secondAttribute="bottom" constant="8" id="eWz-8p-hzx"/>
                                         <constraint firstAttribute="bottom" secondItem="okS-aA-KTk" secondAttribute="bottom" constant="8" id="fY5-aw-Is3"/>
-                                        <constraint firstItem="4E4-dV-j7X" firstAttribute="leading" secondItem="okS-aA-KTk" secondAttribute="trailing" constant="40" id="hMO-q9-GWf"/>
+                                        <constraint firstItem="4E4-dV-j7X" firstAttribute="leading" secondItem="okS-aA-KTk" secondAttribute="trailing" constant="30" id="hMO-q9-GWf"/>
                                         <constraint firstItem="Vcr-lV-LWc" firstAttribute="leading" secondItem="ZvJ-tp-jJP" secondAttribute="trailing" constant="4" id="k1K-b8-x59"/>
-                                        <constraint firstItem="M7W-HD-yre" firstAttribute="leading" secondItem="qa4-Fn-XeT" secondAttribute="trailing" constant="40" id="kjJ-Ri-eMv"/>
+                                        <constraint firstItem="M7W-HD-yre" firstAttribute="leading" secondItem="qa4-Fn-XeT" secondAttribute="trailing" constant="30" id="kjJ-Ri-eMv"/>
                                         <constraint firstItem="qa4-Fn-XeT" firstAttribute="top" secondItem="UoC-83-R9k" secondAttribute="bottom" constant="4" id="mCK-ot-WD2"/>
                                         <constraint firstItem="Gfc-Nk-XOW" firstAttribute="leading" secondItem="ZvJ-tp-jJP" secondAttribute="trailing" constant="4" id="nNr-iI-9Mk"/>
                                         <constraint firstItem="Vcr-lV-LWc" firstAttribute="top" secondItem="Gfc-Nk-XOW" secondAttribute="bottom" constant="4" id="qPC-67-DV5"/>
