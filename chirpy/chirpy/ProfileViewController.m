@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *followersCount;
 
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
+@property (weak, nonatomic) IBOutlet UILabel *tweetsCount;
 
 @end
 
@@ -40,6 +41,7 @@
     self.tagLine.text = user.tagline;
     self.followingCount.text = [NSString stringWithFormat:@"%ld", (long)user.friendCount];
     self.followersCount.text = [NSString stringWithFormat:@"%ld", (long)user.followerCount];
+    self.tweetsCount.text = [NSString stringWithFormat:@"%ld", (long)user.tweetCount];
     NSString *url = [NSString stringWithFormat:@"%@", user.profileImageUrl];
     [self.userIMage setImageWithURL:[NSURL URLWithString:url]];
     
